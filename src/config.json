@@ -1,5 +1,4 @@
 {
-	"discord_token": "",
-	"prefix": "",
+	"prefix": "!",
 	"owners": []
 }

@@ -1,4 +1,4 @@
-import config from '#rootJson/config' assert { type: 'json' };
+import config from '#rootJson/config' with { type: 'json' };
 import { AllFlowsPrecondition } from '@sapphire/framework';
 
 export class UserPrecondition extends AllFlowsPrecondition {

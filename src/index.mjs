@@ -1,7 +1,9 @@
 import '#lib/setup';
-import config from '#rootJson/config' assert { type: 'json' };
+import config from '#rootJson/config' with { type: 'json' };
 import { LogLevel, SapphireClient } from '@sapphire/framework';
 import { GatewayIntentBits, Partials } from 'discord.js';
+import 'dotenv/config'
+import { configDotenv } from 'dotenv';
 
 const client = new SapphireClient({
 	defaultPrefix: config.prefix,
@@ -30,8 +32,11 @@ const client = new SapphireClient({
 
 const main = async () => {
 	try {
+		// Set .env outside of SRC Folder
+		configDotenv({path: '../.env'});
+		// Logging in Process
 		client.logger.info('Logging in');
-		await client.login(config.discord_token);
+		await client.login(process.env.DISCORD_TOKEN);
 		client.logger.info('logged in');
 	} catch (error) {
 		client.logger.fatal(error);
