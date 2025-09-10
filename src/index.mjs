@@ -7,7 +7,6 @@ import { configDotenv } from 'dotenv';
 
 const client = new SapphireClient({
 	defaultPrefix: config.prefix,
-	regexPrefix: /^(hey +)?bot[,! ]/i,
 	caseInsensitivePrefixes: true,
 	caseInsensitiveCommands: true,
 	logger: {
@@ -18,7 +17,6 @@ const client = new SapphireClient({
 		GatewayIntentBits.DirectMessageReactions,
 		GatewayIntentBits.DirectMessages,
 		GatewayIntentBits.GuildModeration,
-		GatewayIntentBits.GuildEmojisAndStickers,
 		GatewayIntentBits.GuildMembers,
 		GatewayIntentBits.GuildMessageReactions,
 		GatewayIntentBits.GuildMessages,

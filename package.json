@@ -29,6 +29,7 @@
   "devDependencies": {
     "@sapphire/cli": "^1.9.3",
     "@sapphire/prettier-config": "^2.0.0",
+    "discord-api-types": "^0.38.22",
     "nodemon": "^3.1.9",
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.4.2"
