@@ -23,6 +23,7 @@ export class MenuHandler extends InteractionHandler {
 			// If Empty - DeferUpdate to avoid errors showing on Discord UI.
 			if (interaction.values.length === 0) return interaction.deferUpdate();
 
+			// Update the UI
 			await this.resetContainer(interaction);
 			await interaction.deferReply({ flags: MessageFlagsBitField.Flags.Ephemeral });
 
