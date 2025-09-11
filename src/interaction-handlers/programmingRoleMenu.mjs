@@ -1,7 +1,6 @@
 import { InteractionHandler, InteractionHandlerTypes } from '@sapphire/framework';
-import config from '#rootJson/config' with { type: 'json' }
+import config from '#rootJson/config' with { type: 'json' };
 import { ContainerBuilder, EmbedBuilder, MessageFlagsBitField, StringSelectMenuBuilder } from 'discord.js';
-
 
 export class MenuHandler extends InteractionHandler {
 	/**
@@ -22,21 +21,22 @@ export class MenuHandler extends InteractionHandler {
 		try {
 			// If Empty - DeferUpdate to avoid errors showing on Discord UI.
 			if (interaction.values.length === 0) return interaction.deferUpdate();
-
 			await this.resetContainer(interaction);
 			await interaction.deferReply({ flags: MessageFlagsBitField.Flags.Ephemeral });
 
 			// Check to see if role exists in Guild
-			const guildRole =  await interaction.guild.roles.cache.find(r => r.id === interaction.values[0]);
+			const guildRole = await interaction.guild.roles.cache.find((r) => r.id === interaction.values[0]);
 			// Checks to see if the user has this role
-			const userHasRole = await interaction.member.roles.cache.find(r => r.id === interaction.values[0]);
+			const userHasRole = await interaction.member.roles.cache.find((r) => r.id === interaction.values[0]);
 
 			if (!userHasRole && guildRole) {
 				// Add Role
 				await interaction.member.roles.add(guildRole, 'Self-Service Role Addition via Role Menu');
 				const addedEmbed = new EmbedBuilder()
 					.setTitle(`${guildRole.name} role has been added`)
-					.setDescription(`If you would like to remove ${guildRole.name} role then please re-select the ${guildRole.name} in the list above.`)
+					.setDescription(
+						`If you would like to remove ${guildRole.name} role then please re-select the ${guildRole.name} in the list above.`
+					)
 					.setColor('#25E52B');
 
 				await interaction.editReply({ embeds: [addedEmbed] });
@@ -46,7 +46,9 @@ export class MenuHandler extends InteractionHandler {
 
 				const removedEmbed = new EmbedBuilder()
 					.setTitle(`${guildRole.name} role has been removed`)
-					.setDescription(`If you would like to add ${guildRole.name} role back then please re-select the ${guildRole.name} in the list above.`)
+					.setDescription(
+						`If you would like to add ${guildRole.name} role back then please re-select the ${guildRole.name} in the list above.`
+					)
 					.setColor('#D72323');
 
 				await interaction.editReply({ embeds: [removedEmbed] });
@@ -61,9 +63,11 @@ export class MenuHandler extends InteractionHandler {
 	 * @param {import('discord.js').StringSelectMenuInteraction} interaction
 	 */
 	parse(interaction) {
-		if (interaction.customId !== 'programming-role-selection') return this.none();
+        if(!config.rolemenus.map(e => e.id).includes(interaction.customId)) {
+            return this.none();
+        }
 
-    	return this.some();
+		return this.some();
 	}
 
 	/**
@@ -74,28 +78,29 @@ export class MenuHandler extends InteractionHandler {
 	 */
 	async resetContainer(interaction) {
 		try {
-			const containerComponent = new ContainerBuilder()
-				.addTextDisplayComponents(
-					textDisplay => textDisplay
-						.setContent('# Programming Roles')
-				)
-				.addActionRowComponents(
-					actionRowBuilder => actionRowBuilder
-						.setComponents(
-							new StringSelectMenuBuilder()
-								.setCustomId('programming-role-selection')
-								.setPlaceholder("Select a role")
-								.setMinValues(0)
-								.setMaxValues(1) // Set due to Discord Limitations
-								.addOptions(
-									config.rolemenus['programming-role-selection'].map(role => {
-										return role?.emoji ? {label: role.displayName, value: role.roleId, emoji: role.emoji} : {label: role.displayName, value: role.roleId};
-									})
-								)
-						)
-				);
+        const containers = Object.entries(config.rolemenus).map((e) =>
+            new ContainerBuilder()
+                .addTextDisplayComponents((textDisplay) => textDisplay.setContent(e[1].content))
+                .addActionRowComponents((ActionRowBuilder) =>
+                    ActionRowBuilder.setComponents(
+                        new StringSelectMenuBuilder()
+                            .setCustomId(e[1].id)
+                            .setPlaceholder(e[1].placeholder)
+                            .setMinValues(0)
+                            .setMaxValues(1)
+                            .addOptions(
+                                e[1].selections.map((role) =>
+                                    role?.emoji
+                                        ? { label: role.displayName, value: role.roleId, emoji: role.emoji }
+                                        : { label: role.displayName, value: role.roleId }
+                                )
+                            )
+                    )
+                )
+        );
 
-			await interaction.message.edit({ components: [containerComponent] });
+
+			await interaction.message.edit({ components: containers });
 		} catch (e) {
 			this.container.logger.error(`programmingRoleMenu::resetContainer ${e}`);
 		}

@@ -1,24 +1,42 @@
 {
 	"prefix": "!",
 	"owners": [],
-	"rolemenus": {
-		"//": "PLEASE NOTE - THE MAXIMUM AMOUNT OF ROLES WITHIN A ROLE MENU IS 24",
-		"programming-role-selection": [
-			{"displayName":  "Rust", "optionId": "Rust", "roleId": "Rust|1"},
-			{"displayName":  "PHP", "optionId": "PHP", "roleId": "1415089899899588719"},
-			{"displayName":  "Go", "optionId": "go", "roleId": "2"},
-			{"displayName":  "C#", "optionId": "c#", "roleId": "3"},
-			{"displayName":  "C++", "optionId": "c++", "roleId": "4"},
-			{"displayName":  "C", "optionId": "c", "roleId": "5"},
-			{"displayName":  "HTML/CSS", "optionId": "html-css", "roleId": "6"},
-			{"displayName":  "JavaScript", "optionId": "javascript", "roleId": "7"},
-			{"displayName":  "TypeScript", "optionId": "typescript", "roleId": "8"},
-			{"displayName":  "Java", "optionId": "java", "roleId": "9"},
-			{"displayName":  "Python", "optionId": "python", "roleId": "10"},
-			{"displayName":  "Dart", "optionId": "dart", "roleId": "11"},
-			{"displayName":  "Swift", "optionId": "swift", "roleId": "12"},
-			{"displayName":  "Kotlin", "optionId": "kotlin", "roleId": "13"},
-			{"displayName":  "Bash", "optionId": "bash", "roleId": "14"}
-		]
-	}
+	"//": "PLEASE NOTE - THE MAXIMUM AMOUNT OF ROLES WITHIN A ROLE MENU IS 24",
+	"rolemenus": [
+		{
+			"contents": ["# Location Roles", "Please select a location"],
+			"id": "location-role-selection",
+			"placeholder": "Select a location",
+			"selections": [
+				{ "displayName": "Europe", "roleId": "1415842460524875827" },
+				{ "displayName": "North America", "roleId": "1415842512291238062" },
+				{ "displayName": "South America", "roleId": "2" },
+				{ "displayName": "Asia", "roleId": "3" },
+				{ "displayName": "Oceania", "roleId": "4" },
+				{ "displayName": "Africa", "roleId": "5" }
+			]
+		},
+		{
+			"contents": ["# Programming Roles", "Please select role(s)"],
+			"id": "programming-role-selection",
+			"placeholder": "Select a role",
+			"selections": [
+				{ "displayName": "Rust", "roleId": "1415836255748489277" },
+				{ "displayName": "PHP", "roleId": "1415836484539519070" },
+				{ "displayName": "Go", "roleId": "2" },
+				{ "displayName": "C#", "roleId": "3" },
+				{ "displayName": "C++", "roleId": "4" },
+				{ "displayName": "C", "roleId": "5" },
+				{ "displayName": "HTML/CSS", "roleId": "6" },
+				{ "displayName": "JavaScript", "roleId": "7" },
+				{ "displayName": "TypeScript", "roleId": "8" },
+				{ "displayName": "Java", "roleId": "9" },
+				{ "displayName": "Python", "roleId": "10" },
+				{ "displayName": "Dart", "roleId": "11" },
+				{ "displayName": "Swift", "roleId": "12" },
+				{ "displayName": "Kotlin", "roleId": "13" },
+				{ "displayName": "Bash", "roleId": "14" }
+			]
+		}
+	]
 }
