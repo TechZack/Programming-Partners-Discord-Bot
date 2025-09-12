@@ -8,35 +8,37 @@
 			"id": "location-role-selection",
 			"placeholder": "Select a location",
 			"selections": [
-				{ "displayName": "Europe", "roleId": "1415842460524875827" },
-				{ "displayName": "North America", "roleId": "1415842512291238062" },
-				{ "displayName": "South America", "roleId": "2" },
-				{ "displayName": "Asia", "roleId": "3" },
-				{ "displayName": "Oceania", "roleId": "4" },
-				{ "displayName": "Africa", "roleId": "5" }
-			]
+				{ "emoji": "🇪🇺", "displayName": "Europe", "roleId": "0" },
+				{ "emoji": "🦅", "displayName": "North America", "roleId": "1" },
+				{ "emoji": "🌄", "displayName": "South America", "roleId": "2" },
+				{ "emoji": "🐼", "displayName": "Asia", "roleId": "3" },
+				{ "emoji": "🐨", "displayName": "Oceania", "roleId": "4" },
+				{ "emoji": "🦒", "displayName": "Africa", "roleId": "5" }
+			],
+			"type": "single"
 		},
 		{
 			"contents": ["# Programming Roles", "Please select role(s)"],
 			"id": "programming-role-selection",
 			"placeholder": "Select a role",
 			"selections": [
-				{ "displayName": "Rust", "roleId": "1415836255748489277" },
-				{ "displayName": "PHP", "roleId": "1415836484539519070" },
-				{ "displayName": "Go", "roleId": "2" },
-				{ "displayName": "C#", "roleId": "3" },
-				{ "displayName": "C++", "roleId": "4" },
-				{ "displayName": "C", "roleId": "5" },
-				{ "displayName": "HTML/CSS", "roleId": "6" },
-				{ "displayName": "JavaScript", "roleId": "7" },
-				{ "displayName": "TypeScript", "roleId": "8" },
-				{ "displayName": "Java", "roleId": "9" },
-				{ "displayName": "Python", "roleId": "10" },
-				{ "displayName": "Dart", "roleId": "11" },
-				{ "displayName": "Swift", "roleId": "12" },
-				{ "displayName": "Kotlin", "roleId": "13" },
-				{ "displayName": "Bash", "roleId": "14" }
-			]
+				{ "emoji": "🔴", "displayName": "Rust", "roleId": "0" },
+				{ "emoji": "🟠", "displayName": "PHP", "roleId": "1" },
+				{ "emoji": "🟡", "displayName": "Go", "roleId": "2" },
+				{ "emoji": "🟢", "displayName": "C#", "roleId": "3" },
+				{ "emoji": "🔵", "displayName": "C++", "roleId": "4" },
+				{ "emoji": "🟣", "displayName": "C", "roleId": "5" },
+				{ "emoji": "🟤", "displayName": "HTML/CSS", "roleId": "6" },
+				{ "emoji": "⚫", "displayName": "JavaScript", "roleId": "7" },
+				{ "emoji": "⚪", "displayName": "TypeScript", "roleId": "8" },
+				{ "emoji": "🟥", "displayName": "Java", "roleId": "9" },
+				{ "emoji": "🟧", "displayName": "Python", "roleId": "10" },
+				{ "emoji": "🟨", "displayName": "Dart", "roleId": "11" },
+				{ "emoji": "🟩", "displayName": "Swift", "roleId": "12" },
+				{ "emoji": "🟦", "displayName": "Kotlin", "roleId": "13" },
+				{ "emoji": "🟪", "displayName": "Bash", "roleId": "14" }
+			],
+			"type": "multi"
 		}
 	]
 }
