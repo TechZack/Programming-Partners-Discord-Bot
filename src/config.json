@@ -139,11 +139,13 @@
         "placeholder": "Select a role",
         "selections": [
           {
+            "emoji": "👨‍🏫",
             "displayName": "I want to be a Mentor",
             "roleId": "1401981766490783967"
           },
           {
-            "displayName": "I want to be a Mentee",
+            "emoji": "📚",
+            "displayName": "I want to learn from a Mentor",
             "roleId": "1401981865077768326"
           }
         ],
