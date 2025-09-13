@@ -1,15 +1,10 @@
 import { Command } from '@sapphire/framework';
-import { send } from '@sapphire/plugin-editable-commands';
 import config from '#rootJson/config' with { type: 'json' };
 
 import {
-	ActionRowBuilder,
 	ContainerBuilder,
 	MessageFlagsBitField,
-	RoleSelectMenuBuilder,
 	StringSelectMenuBuilder,
-	StringSelectMenuOptionBuilder,
-	TextDisplayBuilder
 } from 'discord.js';
 
 export class RoleMenuSetup extends Command {
