@@ -3,42 +3,151 @@
 	"owners": [],
 	"//": "PLEASE NOTE - THE MAXIMUM AMOUNT OF ROLES WITHIN A ROLE MENU IS 24",
 	"rolemenus": [
-		{
-			"contents": ["# Region Roles", "Please select a region"],
-			"id": "location-role-selection",
-			"placeholder": "Select a location",
-			"selections": [
-				{ "emoji": "🇪🇺", "displayName": "Europe", "roleId": "1401964766582542349" },
-				{ "emoji": "🦅", "displayName": "North America", "roleId": "1401964767522062447" },
-				{ "emoji": "🌄", "displayName": "South America", "roleId": "1401964768520048710" },
-				{ "emoji": "🐼", "displayName": "Asia", "roleId": "1401964769111576607" },
-				{ "emoji": "🐨", "displayName": "Oceania", "roleId": "1401964769384337564" },
-				{ "emoji": "🦒", "displayName": "Africa", "roleId": "1401964770818527323" }
-			],
-			"type": "single"
-		},
-		{
-			"contents": ["# Programming Languages", "Please select role(s)"],
-			"id": "programming-role-selection",
-			"placeholder": "Select a role",
-			"selections": [
-				{ "emoji": "🔴", "displayName": "Rust", "roleId": "1401971085024690356" },
-				{ "emoji": "🟠", "displayName": "PHP", "roleId": "1401971019484233879" },
-				{ "emoji": "🟡", "displayName": "Go", "roleId": "1401970968791875634" },
-				{ "emoji": "🟢", "displayName": "C#", "roleId": "1401970795697143934" },
-				{ "emoji": "🔵", "displayName": "C++", "roleId": "1401970406184714412" },
-				{ "emoji": "🟣", "displayName": "C", "roleId": "1401970404167385249" },
-				{ "emoji": "🟤", "displayName": "HTML/CSS", "roleId": "1401969926583091282" },
-				{ "emoji": "⚫", "displayName": "JavaScript", "roleId": "1401969873591996466" },
-				{ "emoji": "⚪", "displayName": "TypeScript", "roleId": "1401970015884021781" },
-				{ "emoji": "🟥", "displayName": "Java", "roleId": "1401969691169128490" },
-				{ "emoji": "🟧", "displayName": "Python", "roleId": "1401970343165296782" },
-				{ "emoji": "🟨", "displayName": "Dart", "roleId": "1401978024546799647" },
-				{ "emoji": "🟩", "displayName": "Swift", "roleId": "1401978082230927440" },
-				{ "emoji": "🟦", "displayName": "Kotlin", "roleId": "1401978180134244463" },
-				{ "emoji": "🟪", "displayName": "Bash", "roleId": "1401985307938656360" }
-			],
-			"type": "multi"
-		}
-	]
+      {
+        "contents": [
+          "# Region Roles",
+          "Please select a region"
+        ],
+        "id": "location-role-selection",
+        "placeholder": "Select a location",
+        "selections": [
+          {
+            "emoji": "🇪🇺",
+            "displayName": "Europe",
+            "roleId": "1401964766582542349"
+          },
+          {
+            "emoji": "🦅",
+            "displayName": "North America",
+            "roleId": "1401964767522062447"
+          },
+          {
+            "emoji": "🌄",
+            "displayName": "South America",
+            "roleId": "1401964768520048710"
+          },
+          {
+            "emoji": "🐼",
+            "displayName": "Asia",
+            "roleId": "1401964769111576607"
+          },
+          {
+            "emoji": "🐨",
+            "displayName": "Oceania",
+            "roleId": "1401964769384337564"
+          },
+          {
+            "emoji": "🦒",
+            "displayName": "Africa",
+            "roleId": "1401964770818527323"
+          }
+        ],
+        "type": "single"
+      },
+      {
+        "contents": [
+          "# Programming Languages",
+          "Please select role(s)"
+        ],
+        "id": "programming-role-selection",
+        "placeholder": "Select a role",
+        "selections": [
+          {
+            "emoji": "🔴",
+            "displayName": "Rust",
+            "roleId": "1401971085024690356"
+          },
+          {
+            "emoji": "🟠",
+            "displayName": "PHP",
+            "roleId": "1401971019484233879"
+          },
+          {
+            "emoji": "🟡",
+            "displayName": "Go",
+            "roleId": "1401970968791875634"
+          },
+          {
+            "emoji": "🟢",
+            "displayName": "C#",
+            "roleId": "1401970795697143934"
+          },
+          {
+            "emoji": "🔵",
+            "displayName": "C++",
+            "roleId": "1401970406184714412"
+          },
+          {
+            "emoji": "🟣",
+            "displayName": "C",
+            "roleId": "1401970404167385249"
+          },
+          {
+            "emoji": "🟤",
+            "displayName": "HTML/CSS",
+            "roleId": "1401969926583091282"
+          },
+          {
+            "emoji": "⚫",
+            "displayName": "JavaScript",
+            "roleId": "1401969873591996466"
+          },
+          {
+            "emoji": "⚪",
+            "displayName": "TypeScript",
+            "roleId": "1401970015884021781"
+          },
+          {
+            "emoji": "🟥",
+            "displayName": "Java",
+            "roleId": "1401969691169128490"
+          },
+          {
+            "emoji": "🟧",
+            "displayName": "Python",
+            "roleId": "1401970343165296782"
+          },
+          {
+            "emoji": "🟨",
+            "displayName": "Dart",
+            "roleId": "1401978024546799647"
+          },
+          {
+            "emoji": "🟩",
+            "displayName": "Swift",
+            "roleId": "1401978082230927440"
+          },
+          {
+            "emoji": "🟦",
+            "displayName": "Kotlin",
+            "roleId": "1401978180134244463"
+          },
+          {
+            "emoji": "🟪",
+            "displayName": "Bash",
+            "roleId": "1401985307938656360"
+          }
+        ],
+        "type": "multi"
+      },
+      {
+        "contents": [
+          "# Misc Roles",
+          "Please select role(s)"
+        ],
+        "id": "misc-role-selection",
+        "placeholder": "Select a role",
+        "selections": [
+          {
+            "displayName": "I want to be a Mentor",
+            "roleId": "1401981766490783967"
+          },
+          {
+            "displayName": "I want to be a Mentee",
+            "roleId": "1401981865077768326"
+          }
+        ],
+        "type": "multi"
+      }
+    ]
 }
