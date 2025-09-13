@@ -68,7 +68,7 @@ export class MenuHandler extends InteractionHandler {
 						embed = new EmbedBuilder()
 							.setTitle(`${guildRole.name} role has been added`)
 							.setDescription(`You can select a new role from the list above.`)
-							.setColor('#D72323');
+							.setColor('#25E52B');
 					}
 
 					break;
@@ -77,7 +77,7 @@ export class MenuHandler extends InteractionHandler {
 						await roleManager.add(guildRole, 'Self-Service Role Addition via Role Menu');
 
 						embed = new EmbedBuilder()
-							.setTitle(`${guildRole.name} role has been selected`)
+							.setTitle(`${guildRole.name} role has been added`)
 							.setDescription(`You can select a new role from the list above.`)
 							.setColor('#25E52B');
 					} else {
