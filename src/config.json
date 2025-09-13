@@ -1,24 +1,44 @@
 {
 	"prefix": "!",
 	"owners": [],
-	"rolemenus": {
-		"//": "PLEASE NOTE - THE MAXIMUM AMOUNT OF ROLES WITHIN A ROLE MENU IS 24",
-		"programming-role-selection": [
-			{"displayName":  "Rust", "optionId": "Rust", "roleId": "Rust|1"},
-			{"displayName":  "PHP", "optionId": "PHP", "roleId": "1415089899899588719"},
-			{"displayName":  "Go", "optionId": "go", "roleId": "2"},
-			{"displayName":  "C#", "optionId": "c#", "roleId": "3"},
-			{"displayName":  "C++", "optionId": "c++", "roleId": "4"},
-			{"displayName":  "C", "optionId": "c", "roleId": "5"},
-			{"displayName":  "HTML/CSS", "optionId": "html-css", "roleId": "6"},
-			{"displayName":  "JavaScript", "optionId": "javascript", "roleId": "7"},
-			{"displayName":  "TypeScript", "optionId": "typescript", "roleId": "8"},
-			{"displayName":  "Java", "optionId": "java", "roleId": "9"},
-			{"displayName":  "Python", "optionId": "python", "roleId": "10"},
-			{"displayName":  "Dart", "optionId": "dart", "roleId": "11"},
-			{"displayName":  "Swift", "optionId": "swift", "roleId": "12"},
-			{"displayName":  "Kotlin", "optionId": "kotlin", "roleId": "13"},
-			{"displayName":  "Bash", "optionId": "bash", "roleId": "14"}
-		]
-	}
+	"//": "PLEASE NOTE - THE MAXIMUM AMOUNT OF ROLES WITHIN A ROLE MENU IS 24",
+	"rolemenus": [
+		{
+			"contents": ["# Location Roles", "Please select a location"],
+			"id": "location-role-selection",
+			"placeholder": "Select a location",
+			"selections": [
+				{ "emoji": "🇪🇺", "displayName": "Europe", "roleId": "0" },
+				{ "emoji": "🦅", "displayName": "North America", "roleId": "1" },
+				{ "emoji": "🌄", "displayName": "South America", "roleId": "2" },
+				{ "emoji": "🐼", "displayName": "Asia", "roleId": "3" },
+				{ "emoji": "🐨", "displayName": "Oceania", "roleId": "4" },
+				{ "emoji": "🦒", "displayName": "Africa", "roleId": "5" }
+			],
+			"type": "single"
+		},
+		{
+			"contents": ["# Programming Roles", "Please select role(s)"],
+			"id": "programming-role-selection",
+			"placeholder": "Select a role",
+			"selections": [
+				{ "emoji": "🔴", "displayName": "Rust", "roleId": "0" },
+				{ "emoji": "🟠", "displayName": "PHP", "roleId": "1" },
+				{ "emoji": "🟡", "displayName": "Go", "roleId": "2" },
+				{ "emoji": "🟢", "displayName": "C#", "roleId": "3" },
+				{ "emoji": "🔵", "displayName": "C++", "roleId": "4" },
+				{ "emoji": "🟣", "displayName": "C", "roleId": "5" },
+				{ "emoji": "🟤", "displayName": "HTML/CSS", "roleId": "6" },
+				{ "emoji": "⚫", "displayName": "JavaScript", "roleId": "7" },
+				{ "emoji": "⚪", "displayName": "TypeScript", "roleId": "8" },
+				{ "emoji": "🟥", "displayName": "Java", "roleId": "9" },
+				{ "emoji": "🟧", "displayName": "Python", "roleId": "10" },
+				{ "emoji": "🟨", "displayName": "Dart", "roleId": "11" },
+				{ "emoji": "🟩", "displayName": "Swift", "roleId": "12" },
+				{ "emoji": "🟦", "displayName": "Kotlin", "roleId": "13" },
+				{ "emoji": "🟪", "displayName": "Bash", "roleId": "14" }
+			],
+			"type": "multi"
+		}
+	]
 }
